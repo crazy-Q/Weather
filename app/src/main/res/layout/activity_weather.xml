@@ -80,7 +80,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_today_tmp"
+                android:id="@+id/tv_today_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -96,7 +96,7 @@
                 android:paddingTop="8dp">
 
                 <TextView
-                    android:id="@+id/tv_now_tmp"
+                    android:id="@+id/tv_now_temp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -226,23 +226,23 @@
                     android:layout_marginTop="8dp">
 
                     <TextView
-                        android:id="@+id/tv_next_temp3"
+                        android:id="@+id/tv_next_three_temp"
                         style="@style/TextViewStyle" />
 
                     <TextView
-                        android:id="@+id/tv_six_temp6"
+                        android:id="@+id/tv_next_six_temp"
                         style="@style/TextViewStyle" />
 
                     <TextView
-                        android:id="@+id/tv_next_temp9"
+                        android:id="@+id/tv_next_nine_temp"
                         style="@style/TextViewStyle" />
 
                     <TextView
-                        android:id="@+id/tv_next_temp12"
+                        android:id="@+id/tv_next_twelve_temp"
                         style="@style/TextViewStyle" />
 
                     <TextView
-                        android:id="@+id/tv_next_temp15"
+                        android:id="@+id/tv_next_fifteen_temp"
                         style="@style/TextViewStyle" />
                 </LinearLayout>
 
@@ -294,7 +294,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/tv_tomorrow_day"
+                        android:id="@+id/tv_tomorrow"
                         style="@style/TextViewStyle"
                         android:layout_weight="3"
                         android:gravity="start"
@@ -330,7 +330,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/tv_third_day"
+                        android:id="@+id/tv_third"
                         style="@style/TextViewStyle"
                         android:layout_weight="3"
                         android:gravity="start"
@@ -366,7 +366,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/tv_fourth_day"
+                        android:id="@+id/tv_fourth"
                         style="@style/TextViewStyle"
                         android:layout_weight="3"
                         android:gravity="start"
