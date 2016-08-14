@@ -1,17 +1,13 @@
 <resources>
-    <string name="app_name">Weather</string>
-    <string name="beijing">北京</string>
-    <string name="_14_00">14:00发布</string>
-    <string name="sun">晴</string>
-    <string name="_20">20</string>
-    <string name="pm2_5">PM2.5</string>
+    <string name="app_name">不靠谱天气</string>
+    <string name="default_text">——</string>
     <string name="forecast">预报</string>
-    <string name="_14">14</string>
-    <string name="_22">22</string>
-    <string name="_20degree">20度</string>
-    <string name="_4hour">上午4时</string>
-    <string name="heavy_pollution">重度污染</string>
-    <string name="_288">288</string>
-    <string name="_22_13">22 13</string>
+    <string name="information">详细信息</string>
     <string name="today">今天</string>
+    <string name="pm">PM2.5</string>
+    <string name="felt_air_temp">体感温度</string>
+    <string name="humidity">湿度</string>
+    <string name="wind">风向风力</string>
+    <string name="uv_index">紫外线强度</string>
+    <string name="dressing_index">穿衣指数</string>
 </resources>
