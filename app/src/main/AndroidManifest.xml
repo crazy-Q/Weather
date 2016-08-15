@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.thinkland.juheapi.openid"
-            android:value="0d6fcc9b1975ab229f4770536108b05f" />
+            android:value="JH1004dde23ded08921a89a1d278c01cbd" />
         <activity
             android:name=".WeatherActivity"
             android:screenOrientation="portrait">

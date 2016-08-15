@@ -3,10 +3,16 @@ package com.jikexueyuan.weather;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.thinkland.sdk.android.DataCallBack;
+import com.thinkland.sdk.android.JuheData;
+import com.thinkland.sdk.android.Parameters;
 
 public class WeatherActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
@@ -62,6 +68,41 @@ public class WeatherActivity extends AppCompatActivity implements SwipeRefreshLa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         init();
+        getCityWeather();
+
+
+    }
+
+    /**
+     * 获取城市天气
+     */
+    private void getCityWeather() {
+        Parameters params = new Parameters();
+        params.add("cityname", "苏州");
+        params.add("dtype", "json");
+        params.add("format", 1);
+
+        JuheData.executeWithAPI(this, 39, "http://v.juhe.cn/weather/index", JuheData.GET, params, new DataCallBack() {
+            @Override
+            public void onSuccess(int statusCode, String responseString) {
+                Log.d("TAG", statusCode + "");
+                Log.d("TAG", responseString + "");
+            }
+            /**
+             * 请求完成时调用的方法,无论成功或者失败都会调用.
+             */
+            @Override
+            public void onFinish() {
+                Toast.makeText(WeatherActivity.this, "over", Toast.LENGTH_SHORT).show();
+            }
+            /**
+             * 请求失败时调用的方法,statusCode为http状态码,throwable为捕获到的异常
+             */
+            @Override
+            public void onFailure(int statusCode, String responseString, Throwable throwable) {
+                Toast.makeText(WeatherActivity.this, "Fail", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void init() {
@@ -129,5 +170,14 @@ public class WeatherActivity extends AppCompatActivity implements SwipeRefreshLa
     @Override
     public void onRefresh() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        /**
+         * 关闭当前页面正在进行中的请求.
+         */
+        JuheData.cancelRequests(this);
     }
 }
